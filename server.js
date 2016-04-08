@@ -4,6 +4,7 @@ var requestProxy = require('express-request-proxy'),
   app = express();
 
 var proxyGitHub = function(request, response) {
+  // request.params[0]= 'users/patSSFC/repos';
   console.log('Routing GitHub request for', request.params[0]);
   (requestProxy({
     url: 'https://api.github.com/' + request.params[0],
